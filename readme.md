@@ -2,6 +2,8 @@
 
 Run Chrome with a GUI inside a Docker container on a Mac.
 
+![](https://raw.githubusercontent.com/dunckr/imgs/master/chrome-docker-mac.gif)
+
 ## Setup
 
 Install [Docker](https://www.docker.com/) and [XQuartz](https://www.xquartz.org/):
@@ -51,3 +53,7 @@ defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
 
 https://blog.bennycornelissen.nl/bwc-gui-apps-in-docker-on-osx/
 https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
+
+## License
+
+MIT © [Duncan Beaton](http://dunckr.com)
