@@ -1,15 +1,10 @@
 NAME=chrome
-IMAGE=chrome
+IMAGE="jess/chrome"
 IP=$(shell ifconfig en0 | grep inet | awk '$$1=="inet" {print $$2}')
 
 all: start
 
-build:
-	@docker build \
-		--tag "${IMAGE}" \
-		.;
-
-create: build
+create:
 	@if [[ -z `docker ps -a | grep '${NAME}'` ]] ; then \
 		docker create \
 			--name="${NAME}" \
