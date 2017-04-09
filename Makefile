@@ -9,6 +9,8 @@ create:
 		docker create \
 			--name="${NAME}" \
 			--memory 512mb \
+			--volume "${HOME}/Downloads:/root/Downloads" \
+			--volume "${HOME}/.config/google-chrome/:/data" \
 			--net host \
 			--security-opt seccomp:unconfined \
 			--env "DISPLAY=${IP}:0" \
@@ -22,9 +24,11 @@ start: create
 	@xhost "+${IP}";
 	@docker start ${NAME};
 
-rm:
+stop:
 	@docker stop ${NAME}
+
+rm: stop
 	@docker rm -v ${NAME}
 	@docker rmi -f ${IMAGE}
 
-.PHONY: build create start rm
+.PHONY: create start stop rm
