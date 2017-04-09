@@ -1,4 +1,4 @@
-# Chrome inside a Docker on a Mac
+# Chrome Docker Mac
 
 Run Chrome with a GUI inside a Docker container on a Mac.
 
@@ -51,8 +51,8 @@ defaults write org.macosforge.xquartz.X11 app_to_run /usr/bin/true
 
 ## Thanks
 
-https://blog.bennycornelissen.nl/bwc-gui-apps-in-docker-on-osx/
-https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
+* https://blog.bennycornelissen.nl/bwc-gui-apps-in-docker-on-osx/
+* https://blog.jessfraz.com/post/docker-containers-on-the-desktop/
 
 ## License
 
